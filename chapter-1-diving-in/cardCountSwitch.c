@@ -9,18 +9,26 @@ int main(void)
 
   switch (card_name[0])
   {
-  case /* constant-expression */:
-  /* code */
-  case:
-    'K' : case : 'Q' : case : 'J' : val = 10;
+  case 'K':
+  case 'Q':
+  case 'J':
+    val = 10;
     break;
-  case:
-    'A' val = 11;
+  case 'A':
+    val = 11;
     break;
-
   default:
-    val = atoi(card_name[0]);
+    val = atoi(card_name);
     break;
+  }
+
+  if ((val > 2) && (val < 7))
+  {
+    puts("Count has gone up");
+  }
+  else if (val == 10)
+  {
+    puts("Count has gone down");
   }
   return 0;
 }
